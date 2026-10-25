@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d2v0ophkkwu40"]
+
+[ext_resource type="PackedScene" uid="uid://006pckuuvpji" path="res://main/the_plague_doctor.tscn" id="1_ccoan"]
+
+[node name="monster" unique_id=311920163 instance=ExtResource("1_ccoan")]
+script = null

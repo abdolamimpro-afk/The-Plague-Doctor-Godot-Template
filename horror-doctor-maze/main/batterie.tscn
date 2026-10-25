@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d3d4o1jhka0a8"]
+
+[ext_resource type="PackedScene" uid="uid://1qbbmnftsut8" path="res://assets/simple_aa_battery.glb" id="1_8hqao"]
+[ext_resource type="Script" uid="uid://jmjwd3xreid2" path="res://main/battery.gd" id="2_xvpfr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xvpfr"]
+size = Vector3(1, 1, 2.2793732)
+
+[node name="batterie" type="Node3D" unique_id=1974966894]
+script = ExtResource("2_xvpfr")
+
+[node name="body" parent="." unique_id=1662960295 instance=ExtResource("1_8hqao")]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, 3, 0, -3, -1.3113416e-07, 0, 0, -0.0013095494)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1973422304]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1226795691]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, -0.0069236755)
+shape = SubResource("BoxShape3D_xvpfr")

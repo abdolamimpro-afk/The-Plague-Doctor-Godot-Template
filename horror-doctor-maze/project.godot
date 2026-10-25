@@ -1,0 +1,44 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="horror doctor maze"
+run/main_scene="uid://cdwwx54e7ucra"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/windows_native_icon="res://favicon.ico"
+
+[autoload]
+
+GameManager="*uid://dm3vajvqyx6lq"
+Settings="*uid://baxxrucfd74w5"
+CrazySDK="*uid://bpy8xwctp6o0p"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
+window/stretch/mode="canvas_items"
+
+[internationalization]
+
+rendering/root_node_layout_direction=1
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/volumetric_fog/volume_size=32
+environment/volumetric_fog/volume_depth=32

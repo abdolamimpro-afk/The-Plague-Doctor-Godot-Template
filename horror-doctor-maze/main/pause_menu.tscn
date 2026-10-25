@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://cqmcqllbhx6j"]
+
+[ext_resource type="Script" uid="uid://cfrirfe6fqrbx" path="res://main/pause_menu.gd" id="1_r1ajr"]
+[ext_resource type="FontFile" uid="uid://pos1kqsrlpek" path="res://assets/JMH HORROR.otf" id="3_bme8k"]
+[ext_resource type="AudioStream" uid="uid://bjxw0sfb80pjf" path="res://assets/sounds/emilianodleon-select-button-ui-395763.mp3" id="4_v7a3x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h8f58"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cmlcs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wgocm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e62vd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_r1ajr"]
+font = ExtResource("3_bme8k")
+font_size = 200
+font_color = Color(0.072842635, 0.072842635, 0.072842635, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1ajr"]
+content_margin_top = 20.0
+bg_color = Color(0.32915837, 0.3291584, 0.3291583, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiebi"]
+bg_color = Color(0.6830772, 0.6830774, 0.6830771, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbfvu"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=2077913779]
+script = ExtResource("1_r1ajr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=387856502]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.20990813, 0.20990813, 0.2099081, 1)
+
+[node name="RetryButton" type="Button" parent="." unique_id=235124608]
+unique_name_in_owner = true
+offset_left = 750.0
+offset_top = 850.0
+offset_right = 1055.0
+offset_bottom = 1025.0
+theme_override_colors/font_color = Color(0.64466345, 0.64466345, 0.6446633, 1)
+theme_override_colors/font_pressed_color = Color(0.19793725, 0.19793722, 0.19793722, 1)
+theme_override_colors/font_hover_color = Color(0.39181864, 0.39181864, 0.3918185, 1)
+theme_override_fonts/font = ExtResource("3_bme8k")
+theme_override_font_sizes/font_size = 140
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h8f58")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cmlcs")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wgocm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_e62vd")
+text = "replay"
+
+[node name="MenuButton" type="Button" parent="." unique_id=816949383]
+unique_name_in_owner = true
+offset_left = 100.0
+offset_top = 850.0
+offset_right = 369.0
+offset_bottom = 1025.0
+theme_override_colors/font_color = Color(0.64466345, 0.64466345, 0.6446633, 1)
+theme_override_colors/font_pressed_color = Color(0.19793725, 0.19793722, 0.19793722, 1)
+theme_override_colors/font_hover_color = Color(0.39181864, 0.39181864, 0.3918185, 1)
+theme_override_fonts/font = ExtResource("3_bme8k")
+theme_override_font_sizes/font_size = 140
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h8f58")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cmlcs")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wgocm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_e62vd")
+text = "menu"
+
+[node name="ContinueButton" type="Button" parent="." unique_id=1614464353]
+unique_name_in_owner = true
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 470.0
+offset_top = -230.0
+offset_right = 864.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.64466345, 0.64466345, 0.6446633, 1)
+theme_override_colors/font_pressed_color = Color(0.19793725, 0.19793722, 0.19793722, 1)
+theme_override_colors/font_hover_color = Color(0.39181864, 0.39181864, 0.3918185, 1)
+theme_override_fonts/font = ExtResource("3_bme8k")
+theme_override_font_sizes/font_size = 140
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h8f58")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cmlcs")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wgocm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_e62vd")
+text = "Continue"
+
+[node name="Control" type="Control" parent="." unique_id=1679249008]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -337.0
+offset_top = -373.0
+offset_right = 270.0
+offset_bottom = 169.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control" unique_id=16475509]
+layout_mode = 0
+offset_right = 607.0
+offset_bottom = 249.0
+text = "volume"
+label_settings = SubResource("LabelSettings_r1ajr")
+
+[node name="Volume" type="HSlider" parent="Control" unique_id=2036821317]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 253.0
+offset_right = 607.0
+offset_bottom = 269.0
+theme_override_constants/tick_offset = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_r1ajr")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_eiebi")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_pbfvu")
+value = 50.0
+
+[node name="Label2" type="Label" parent="Control" unique_id=2030266203]
+layout_mode = 0
+offset_top = 273.0
+offset_right = 607.0
+offset_bottom = 522.0
+text = "sensivity"
+label_settings = SubResource("LabelSettings_r1ajr")
+
+[node name="Sensivity" type="HSlider" parent="Control" unique_id=1557334751]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 526.0
+offset_right = 607.0
+offset_bottom = 542.0
+theme_override_styles/slider = SubResource("StyleBoxFlat_r1ajr")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_eiebi")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_pbfvu")
+value = 50.0
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=335860326]
+unique_name_in_owner = true
+stream = ExtResource("4_v7a3x")
+volume_db = 5.0
