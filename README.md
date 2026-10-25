@@ -1,145 +1,275 @@
-The Plague Doctor — Godot 4 Horror Game Template
+🩺 The Plague Doctor — Godot 4 Horror Game Template
 
-A feature-rich 3D first-person horror starter project built with Godot 4.
+A reusable horror game development template for Godot 4.
 
-The Plague Doctor is a horror game project designed as a starting point for developers who want to explore and build their own atmospheric horror experiences. It combines enemy AI, first-person movement, stealth mechanics, interactive objects, resource management, and immersive horror effects in one playable project.
+The Plague Doctor is a 3D first-person horror game template designed to help developers understand, customize, and build their own horror games using Godot Engine 4.
 
-Use it to study the implementation, experiment with the gameplay systems, and develop your own horror game.
+Instead of starting from an empty project, developers can explore an existing gameplay foundation featuring enemy AI, maze exploration, player movement, interactive objects, survival mechanics, and horror atmosphere.
 
-Features
+This repository is intended as a starting point for your own horror game projects. You can study the code, modify the gameplay systems, replace assets, customize the interface, and expand the project to fit your vision.
 
-👁️ Enemy AI System
+🎮 Features
 
-- Patrol behavior with configurable patrol points
-- Player vision detection with adjustable range and field of view
-- Investigation behavior triggered by player-generated noise
-- Chase behavior when the player is detected
-- Configurable movement speeds and detection settings
-- Navigation-based enemy movement
+👁️ Enemy AI
 
-🎮 First-Person Controller
+- Enemy patrol and investigation behavior.
+- Player detection and chase mechanics.
+- Configurable movement speeds and detection settings.
+- Navigation-based enemy movement, depending on scene configuration.
 
-- Configurable walking and running speeds
-- Stamina consumption and recovery
-- Crouching and stealth movement
-- Noise generation based on player movement
-- Camera head bobbing and movement effects
-- Adjustable mouse sensitivity
+🏃 Player Controller
 
-🔦 Flashlight & Battery System
+- First-person movement.
+- Walking and running.
+- Stamina consumption and recovery.
+- Movement effects and survival gameplay.
 
-- Usable flashlight with battery consumption
-- Configurable battery capacity and drain rate
-- Low-battery flickering effects
-- Battery pickups to restore flashlight energy
-- Dynamic lighting that supports the horror atmosphere
+🔦 Flashlight and Battery System
 
-🫀 Immersive Horror Effects
+- Flashlight battery management.
+- Battery drain and recharge pickups.
+- Low-battery flickering effects.
+- Adjustable battery settings.
 
-- Heartbeat audio influenced by nearby danger
-- Fear effects and tunnel vision
-- Ambient whispers and randomized scare events
-- Footstep and breathing audio
-- Camera movement and visual feedback
+🧩 Interactive Fuse System
 
-🔋 Interactive Item System
+The project includes four colored fuse types with different gameplay effects:
 
-- Interactable objects and collectible items
-- Four colored fuse types with different gameplay effects
-- Objective tracking through fuse collection
-- Red fuses that can attract the monster and reveal the player's location
-- Blue fuses that provide temporary movement and stamina boosts
-- Green fuses that temporarily disable the monster's hearing
-- Battery pickups and interaction prompts
+- Orange Fuse: Contributes to the required fuse objective.
+- Red Fuse: Can attract the monster or reveal the player's location.
+- Blue Fuse: Provides a temporary stamina and speed boost.
+- Green Fuse: Temporarily affects the monster's ability to hear.
 
-🖥️ UI & Game Flow
+The exact effects and requirements can be customized in the corresponding scripts.
 
-- Main menu
-- Pause menu with resume and retry options
-- Audio volume controls
-- Mouse sensitivity settings
-- Win and game-over screens
-- Objective counters and gameplay feedback
+🗺️ Horror Environments
 
-Built With
+- Maze exploration.
+- Sewer-themed environment scenes.
+- Atmospheric lighting and horror presentation.
+- Enemy encounters and survival objectives.
 
-- Engine: Godot Engine 4
-- Language: GDScript
-- Dimension: 3D
-- Perspective: First-person
-- Rendering: Compatibility renderer
+🖥️ User Interface
 
-Requirements
+- Main menu.
+- Story screen.
+- Pause menu.
+- Settings and volume controls.
+- Mouse sensitivity settings.
+- Game-over screen.
+- Victory screen.
+- Gameplay counters and temporary ability timers.
 
-- Godot Engine 4.7, matching the project configuration
-- A computer capable of running the included 3D scenes and assets
+🔊 Audio and Visual Atmosphere
 
-Other Godot 4 versions have not been verified.
+- Horror sound effects and ambient audio.
+- Visual effects and low-battery feedback.
+- Textures, models, and environmental assets.
 
-Getting Started
+🛠️ Why Use This Template?
 
-1. Download or clone this repository.
-2. Open the Godot Project Manager.
-3. Click Import.
-4. Select the project's "project.godot" file.
-5. Open the project and allow Godot to import the assets.
-6. Run the project using the configured main scene.
+This project can help developers who want to:
 
-If the project does not open correctly, check the Godot version and review any missing dependencies or import errors.
+- Learn how different gameplay systems work together in Godot.
+- Build a horror game without creating every system from scratch.
+- Experiment with enemy AI and player detection.
+- Reuse or adapt gameplay mechanics for a new project.
+- Study scene organization and GDScript.
+- Customize an existing horror game foundation instead of beginning with an empty project.
 
-Customization
+Important: This is a starting template, not a universal plug-and-play framework. Some systems may need adjustments when you integrate them into a different game.
 
-Many gameplay values are exposed through exported variables in GDScript, allowing developers to experiment with:
+⚙️ Requirements
 
-- Monster vision range, patrol speed, and chase speed
-- Player movement speeds and stamina settings
-- Flashlight battery drain and flickering
-- Fear effects and audio behavior
-- Fuse effects and temporary power-ups
-- Menu audio and mouse sensitivity
+- Godot Engine 4.x.
+- A compatible desktop environment.
+- The project configuration currently declares Godot 4.7; verify compatibility with your installed version before making changes.
 
-The project can be used as a foundation for experiments, prototypes, and custom horror game projects.
+The project uses Godot's Compatibility rendering method. Performance depends on your hardware, scene complexity, and rendering settings.
 
-Project Structure
+🚀 Getting Started
 
-- "main/Player.gd" — Player controller and horror gameplay mechanics
-- "main/the_plague_doctor.gd" — Monster AI behavior
-- "main/game_manager.gd" — Objective tracking and win/loss flow
-- "main/fuses.gd" — Fuse interactions and gameplay effects
-- "main/battery.gd" — Battery pickup behavior
-- "main/pause_menu.gd" — Pause menu controls
-- "main/settings.gd" — Settings data
-- "main/" — Gameplay scenes and UI scenes
-- "project.godot" — Godot project configuration
+1. Clone or download this repository.
+2. Open Godot Project Manager.
+3. Click Import and select the project's "project.godot" file.
+4. Open the project and allow Godot to import its resources.
+5. Press F6 to run the currently open scene or F5 to run the configured main scene.
 
-Important Notes
+If Godot reports missing resources, check that you downloaded the complete repository and are using a compatible engine version.
 
-This is a reusable starting project, not a universal plug-and-play framework. Some systems are connected to the included scenes and node structure, so review the relevant scripts before moving them into another project.
+📁 Project Structure
 
-The project has not been independently verified across every supported operating system or Godot version.
+The following overview highlights important project files. It is not an exhaustive inventory of every resource.
 
-Credits & Third-Party Assets
+horror-doctor-maze/
+├── project.godot
+├── favicon.ico
+├── main/
+│   ├── Main.tscn
+│   ├── Menu.tscn
+│   ├── MonsterMenu.tscn
+│   ├── Player.tscn
+│   ├── Player.gd
+│   ├── the_plague_doctor.tscn
+│   ├── the_plague_doctor.gd
+│   ├── maze.tscn
+│   ├── the_sewer_maze.tscn
+│   ├── batterie.tscn
+│   ├── battery.gd
+│   ├── fuses.tscn
+│   ├── fuses.gd
+│   ├── game_manager.gd
+│   ├── UI.gd
+│   ├── UIMenu.gd
+│   ├── pause_menu.tscn
+│   ├── pause_menu.gd
+│   ├── settings.gd
+│   ├── game_over.tscn
+│   ├── game_over.gd
+│   ├── won.tscn
+│   └── won.gd
+├── assets/
+│   ├── generated/
+│   ├── sounds/
+│   ├── backrooms-maze-generator-script/
+│   ├── low_poly_sewer_props.glb
+│   └── simple_aa_battery.glb
+├── scp-049/
+│   ├── source/
+│   └── textures/
+└── textures/
+    ├── floor/
+    └── wall/
 
-Third-party models, textures, sounds, fonts, animations, plugins, and other resources may be included.
+Godot may also generate a ".godot/" directory for editor metadata and imported resource caches.
 
-Please review the asset credits and individual licenses before redistributing or using this project commercially. Do not assume that the project's code license automatically covers third-party assets.
+📜 Important Scripts
 
-[Add a complete list of asset creators, source links, and applicable licenses here.]
+Player System
 
-License
+File| Responsibility
+"main/Player.gd"| Player movement, stamina, flashlight, battery behavior, and related player mechanics.
+"main/Player.tscn"| Player scene and node hierarchy.
 
-See the "LICENSE" file for the license applicable to the project code.
+Useful variables to investigate include "walk_speed", "run_speed", "max_stamina", "stamina_drain", "stamina_recover", "max_battery", and "battery_drain_rate".
 
-Third-party assets remain subject to their respective licenses.
+Enemy System
 
-Feedback
+File| Responsibility
+"main/the_plague_doctor.gd"| Enemy behavior, patrol, investigation, chasing, and player detection.
+"main/the_plague_doctor.tscn"| Plague Doctor enemy scene.
 
-Found an issue or have an idea for improving the project? Open an issue in this repository.
+Useful variables include "patrol_speed", "investigate_speed", "chase_speed", "vision_range", "vision_angle_deg", and "catch_distance".
 
-If you use this project as a learning resource or starting point, feedback and suggestions are welcome.
+Items and Game Progress
+
+File| Responsibility
+"main/fuses.gd"| Fuse types, effects, and related interactions.
+"main/fuses.tscn"| Fuse scene.
+"main/battery.gd"| Battery pickup and energy restoration behavior.
+"main/batterie.tscn"| Battery scene.
+"main/game_manager.gd"| Game progress, fuse requirements, and game-state transitions.
+
+UI and Menus
+
+File| Responsibility
+"main/UI.gd"| Gameplay UI, counters, and temporary ability timers.
+"main/UIMenu.gd"| Main menu and story-screen behavior.
+"main/pause_menu.gd"| Pause menu and related controls.
+"main/settings.gd"| Shared settings, including mouse sensitivity.
+"main/game_over.gd"| Game-over screen behavior.
+"main/won.gd"| Victory screen behavior.
+
+Scene files (".tscn") define scene structures and resource connections, while GDScript files (".gd") implement gameplay logic. Some behavior also depends on nodes, signals, resources, and project settings configured in the Godot editor.
+
+🎨 Customization Guide
+
+Change Player Movement
+
+Open "main/Player.gd" and inspect the exported movement settings, such as:
+
+- "walk_speed"
+- "run_speed"
+- "exhausted_speed"
+
+Adjust Stamina
+
+Inspect these variables in "main/Player.gd":
+
+- "max_stamina"
+- "stamina_drain"
+- "stamina_recover"
+
+Customize Flashlight Behavior
+
+Review flashlight-related variables in "main/Player.gd", including:
+
+- "max_battery"
+- "battery_drain_rate"
+- "flicker_enabled"
+- "flicker_low_battery_threshold"
+
+Change Enemy Difficulty
+
+Open "main/the_plague_doctor.gd" and investigate:
+
+- "patrol_speed"
+- "investigate_speed"
+- "chase_speed"
+- "vision_range"
+- "vision_angle_deg"
+- "catch_distance"
+
+Test changes in the running game, especially navigation, collisions, and detection behavior.
+
+Modify Fuse Mechanics
+
+- Use "main/fuses.gd" to investigate fuse types and their gameplay effects.
+- Use "main/game_manager.gd" to investigate fuse collection requirements and game progression.
+
+Before modifying a system, inspect its associated scene and connected nodes to understand its dependencies.
+
+📦 Assets and Third-Party Licenses
+
+The project includes models, textures, audio, and other resources in folders such as "assets/", "scp-049/", and "textures/".
+
+Before redistributing the template or using it commercially, verify the original license and attribution requirements for every third-party resource, including:
+
+- Character and enemy models.
+- Environmental models and textures.
+- Music and sound effects.
+- Fonts and other downloaded resources.
+- Third-party scripts, plugins, and libraries.
+
+The repository's MIT license does not automatically grant permission to redistribute third-party assets. Each resource must be checked against its own license.
+
+A complete asset credits and license inventory should identify each external resource, its source, its author where required, and the applicable license.
+
+📄 License
+
+See the repository's "LICENSE" file for the license that applies to the project code.
+
+Third-party assets may be governed by separate licenses. Check their terms before reusing, modifying, or redistributing them.
+
+🐛 Bug Reports and Feedback
+
+If you encounter a problem, include:
+
+- Your Godot version.
+- The steps required to reproduce the issue.
+- The expected behavior and actual behavior.
+- Relevant errors from Godot's Output or Debugger panels.
+
+Feedback and suggestions that help improve the template are welcome.
+
+🤝 Contributions
+
+Contributions and suggestions are welcome, subject to the repository's license and the licenses of included assets.
+
+When contributing, keep gameplay systems organized and document new configuration options where appropriate.
 
 ---
 
-Created with Godot 4.
+Built with Godot Engine 4.
 
-Explore the systems, learn from the implementation, and build your own horror experience.
+The Plague Doctor is a horror game template intended to help developers learn, experiment, and build their own horror projects. Explore the code, customize the mechanics, and use the project as a foundation for your next horror game.
